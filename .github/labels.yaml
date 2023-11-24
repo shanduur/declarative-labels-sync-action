@@ -1,0 +1,63 @@
+- name: api
+  color: 6f42c1
+  description: Issues related to the GitHub API
+- name: enhancement
+  color: 0dd8ac
+  description: New feature or improvement request
+- name: high-priority
+  color: ff7b72
+  description: Issue with high priority
+- name: dependency
+  color: dadada
+  description: Dependency updates
+- name: question
+  color: ffb000
+  description: Questions or need for further clarification
+- name: test
+  color: ffffff
+  description: "Test label. \U0001F6A7"
+- name: invalid
+  color: e4e669
+  description: Issue is no longer valid or applicable
+- name: duplicate
+  color: cfd3d7
+  description: Issue already reported or duplicated
+- name: feature-request
+  color: 61dafb
+  description: Request for a new feature or enhancement
+- name: feedback
+  color: d4c5f9
+  description: Feedback or suggestions for improvement
+- name: help-wanted
+  color: 7057ff
+  description: Contribution opportunities available
+- name: in-progress
+  color: 2a8b9d
+  description: Issue currently being worked on
+- name: testing
+  color: 36bcef
+  description: Issues related to testing or test cases
+- name: ¯\_(ツ)_/¯
+  color: f9d0c4
+  description: ¯\\\_(ツ)_/¯
+- name: critical
+  color: e00808
+  description: Critical issue that requires immediate attention
+- name: documentation
+  color: 007bc7
+  description: Issues related to documentation
+- name: hacktoberfest
+  color: ff6b00
+  description: Issues related to the Hacktoberfest event
+- name: resolved
+  color: 28a745
+  description: Issue has been resolved
+- name: bug
+  color: d73a4a
+  description: Something isn't working as expected
+- name: low-priority
+  color: 8c8c8c
+  description: Issue with low priority
+- name: wontfix
+  color: a2eeef
+  description: Issue won't be fixed or addressed

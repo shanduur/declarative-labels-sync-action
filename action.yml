@@ -1,0 +1,26 @@
+name: Declarative Label Sync
+description: Sync labels from files located in reposiotry.
+inputs:
+  owner:
+    description: Owner of the repository.
+    required: true
+  repository:
+    description: Target sync repository.
+    required: true
+  token:
+    description: GitHub token used to sync labels.
+    required: true
+  labels_declarations:
+    description: Location of YAML file containing labels declarations.
+    required: true
+    default: ./.github/labels.yaml
+runs:
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/scripts/label-sync.sh
+      shell: bash
+      env:
+        LABELER_TOKEN: ${{ inputs.token }}
+        REPO: ${{ inputs.repository }}
+        OWNER: ${{ inputs.owner }}
+        LABELS_YAML: ${{ inputs.labels_declarations }}

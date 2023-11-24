@@ -1,0 +1,33 @@
+# This workflow run linters and tests.
+# It is supposed to be run on each push to main branch, as well as for each push in pull request.
+
+name: Linters
+
+on:
+  pull_request:
+    branches: [ '*' ]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    name: Lint commit messages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
+
+  shell-linter:
+    name: Run Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
